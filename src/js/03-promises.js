@@ -21,7 +21,11 @@ function onCreate(evt) {
   const step = Number(delayStep.value);
   const promiseAmount = Number(amount.value);
 
-  if (!promiseAmount) {
+  // if (!promiseAmount) {
+  //   return;
+  // }
+  if (step < 0 || delay < 0 || promiseAmount <= 0) {
+    Notiflix.Notify.failure(`Enter correct data`);
     return;
   } else {
     createBtn.disabled = true;

@@ -56,6 +56,7 @@ function startTimer() {
     console.log(leftTime);
     if (leftTime <= 1000) {
       clearInterval(idInterval);
+      input.disabled = false;
     }
   }, 1000);
 }
